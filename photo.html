@@ -50,22 +50,66 @@
   .back-link:hover {
     text-decoration: underline;
   }
+
+  /* 照片网格：一行3张 */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .photo-grid img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 </style>
 </head>
 <body>
     <a href="index.html" class="back-link">← 返回主页</a>
 
-    <h1>📷 摄影日常</h1>
+    <h1>📷 四季摄影集</h1>
 
+    <!-- 春 -->
     <div class="section">
-        <h2>我的作品</h2>
-        <p>这里可以放你拍的照片，比如：</p>
-        <ul>
-            <li>扫街记录</li>
-            <li>旅行风景</li>
-            <li>胶片质感尝试</li>
-        </ul>
-        <!-- 以后你可以在这里插入图片：<img src="你的照片链接" style="width:100%; border-radius:8px; margin-top:12px;"> -->
+        <h2>🌸 春</h2>
+        <div class="photo-grid">
+            <img src="spring1.jpg">
+            <img src="spring2.jpg">
+            <img src="spring3.jpg">
+        </div>
     </div>
+
+    <!-- 夏 -->
+    <div class="section">
+        <h2>☀️ 夏</h2>
+        <div class="photo-grid">
+            <img src="summer1.jpg">
+            <img src="summer2.jpg">
+            <img src="summer3.jpg">
+        </div>
+    </div>
+
+    <!-- 秋 -->
+    <div class="section">
+        <h2>🍂 秋</h2>
+        <div class="photo-grid">
+            <img src="autumn1.jpg">
+            <img src="autumn2.jpg">
+            <img src="autumn3.jpg">
+        </div>
+    </div>
+
+    <!-- 冬 -->
+    <div class="section">
+        <h2>❄️ 冬</h2>
+        <div class="photo-grid">
+            <img src="winter1.jpg">
+            <img src="winter2.jpg">
+            <img src="winter3.jpg">
+        </div>
+    </div>
+
 </body>
 </html>
