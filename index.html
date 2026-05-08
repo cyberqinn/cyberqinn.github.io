@@ -116,7 +116,7 @@
     line-height: 1.5;
   }
 
-  /* My Vibe 卡片网格 */
+  /* My Vibe 卡片网格（已加点击提示） */
   .vibe-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -130,17 +130,20 @@
     border: 1px solid #333;
     text-align: center;
     transition: all 0.2s ease;
+    cursor: pointer; /* 鼠标变成手型 */
   }
   .vibe-card:hover {
     transform: translateY(-3px);
     background: #2a2a2a;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    color: #64b5f6; /* 文字变主题色 */
+    border-color: #64b5f6; /* 边框高亮 */
   }
   .vibe-card a {
     color: inherit;
   }
 
-  /* 宠物带照片卡片样式 */
+  /* 宠物带照片卡片样式（已修复竖长照片问题） */
   .pet-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -163,7 +166,9 @@
   .pet-card img {
     width: 100%;
     height: 160px;
+    /* 修复竖长照片问题：居中裁剪，优先显示中间部分 */
     object-fit: cover;
+    object-position: center center;
     border-radius: 8px;
     margin-bottom: 12px;
   }
@@ -175,6 +180,7 @@
   .pet-desc {
     font-size: 0.85rem;
     color: #aaa;
+    line-height: 1.4;
   }
 </style>
 </head>
@@ -187,7 +193,7 @@
 
     <div class="section">
         <h2>About Me</h2>
-        <p>World explorer🌍 / INFJ / 射手座♐️ / 日常未知流浪🚶🏼‍♀️ / 抽象文艺逼🪺 </p>
+        <p>World explorer/INFJ/射手座/日常未知流浪/抽象文艺逼</p>
     </div>
     
     <div class="section">
@@ -241,15 +247,15 @@
         <div class="pet-grid">
             <!-- 小猫 -->
             <div class="pet-card">
-                <img src="cat.jpg" alt="小猫">
+                <img src="cat.jpg" alt="Neko">
                 <div class="pet-name">🐱 Neko</div>
                 <div class="pet-desc">一只没有边界感爱撒娇🥺的bully girl</div>
             </div>
             <!-- 小狗 -->
             <div class="pet-card">
-                <img src="dog.jpg" alt="小狗">
+                <img src="dog.jpg" alt="Lucky">
                 <div class="pet-name">🐶 Lucky</div>
-                <div class="pet-desc">一只喜欢刨地爱摸摸的teenager(12岁高龄依旧爱打架🦮</div>
+                <div class="pet-desc">一只喜欢刨地爱摸摸的teenager(12岁高龄依旧爱打架🦘)</div>
             </div>
         </div>
     </div>
