@@ -63,6 +63,43 @@
     color: #666;
     font-size: 0.9rem;
   }
+
+  /* 时间轴样式（已嵌入） */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid #333;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 18px;
+    padding-bottom: 4px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #64b5f6;
+    border: 2px solid #121212;
+  }
+  .time-date {
+    color: #90caf9;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .time-city {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 2px 0;
+  }
+  .time-desc {
+    font-size: 0.9rem;
+  }
 </style>
 </head>
 <body>
@@ -75,6 +112,43 @@
     <div class="section">
         <h2>About Me</h2>
         <p>World explorer/INFJ/射手座/日常未知流浪/抽象文艺逼</p>
+    </div>
+
+    <!-- 👇 这里是你要的 时间轴 👇 -->
+    <div class="section">
+        <h2>Life Timeline 🕰️</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time-date">2001.11 - 2019.09</div>
+                <div class="time-city">📍 乌鲁木齐</div>
+                <div class="time-desc">什么形容词都无法描述-我的18岁🫧（迷茫又忧郁的奥德赛时期😶‍🌫️）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-date">2019.09 - 2023.06</div>
+                <div class="time-city">📍 厦门</div>
+                <div class="time-desc">单薄人生中无限拉长的4年（朋友🫂、落日🌄和大海🌊）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-date">2023.06 - 2025.06</div>
+                <div class="time-city">📍 上海</div>
+                <div class="time-desc">混沌纪元🍾和连绵的雨季☔️</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-date">2025.09 - 2025.12</div>
+                <div class="time-city">📍 深圳</div>
+                <div class="time-desc">人生gap期🗝️（好多阳光明媚的moments☀️）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-date">2025.12 - 2026.04</div>
+                <div class="time-city">📍 上海</div>
+                <div class="time-desc">再见上海，恢复心气和上进心的重要时点🤖</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-date">2026.05 - ? </div>
+                <div class="time-city">📍 北京</div>
+                <div class="time-desc">New journey🔜</div>
+            </div>
+        </div>
     </div>
 
     <div class="section">
@@ -99,7 +173,6 @@
         <p>GitHub: <a href="https://github.com/cyberqinn">@cyberqinn</a></p>
     </div>
 
-    <!-- 👇 访客统计卡片 👇 -->
     <div class="section" style="text-align:center;">
         <h2>Visitor Stats</h2>
         <p>👀 总访问量 <span id="busuanzi_value_site_pv">...</span></p>
@@ -110,7 +183,6 @@
         © 2026 Cyberqin | Made with ❤️
     </footer>
 
-    <!-- 👇 统计核心代码，不用管，直接放这里 👇 -->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
