@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>电影/音乐 | Yiting</title>
+    <title>Film & Music | Yiting</title>
     <style>
   * {
     box-sizing: border-box;
@@ -50,24 +50,127 @@
   .back-link:hover {
     text-decoration: underline;
   }
+  ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  li {
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+    border-radius: 4px;
+    padding: 4px 6px;
+    margin: 4px 0;
+  }
+  li:hover {
+    background-color: #2a2a2a;
+    padding-left: 10px;
+  }
+  .category-title {
+    color: #999;
+    font-size: 0.95rem;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* 影视海报 三格网格 */
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .media-card {
+    background: #252525;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .media-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
+  .media-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .media-name {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+  .media-desc {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
 </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← 返回主页</a>
+    <a href="index.html" class="back-link">← Back to Home</a>
 
-    <h1>🎬 电影/音乐</h1>
+    <h1>Film & Music 🎬🎶</h1>
 
+    <!-- 第一块：Top 3 电影 -->
     <div class="section">
-        <h2>我的Top片单</h2>
+        <h2>Top 3 Movies</h2>
+        <p class="category-title">My all-time favourite films</p>
+        <div class="media-grid">
+            <div class="media-card">
+                <img src="movie1.jpg">
+                <div class="media-name">爱乐之城</div>
+                <div class="media-desc">遗憾是有重量的</div>
+            </div>
+            <div class="media-card">
+                <img src="movie2.jpg">
+                <div class="media-name">星际穿越</div>
+                <div class="media-desc">STAY</div>
+            </div>
+            <div class="media-card">
+                <img src="movie3.jpg">
+                <div class="media-name">机器人之梦</div>
+                <div class="media-desc">原来被留在沙滩上的是我</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二块：Top 3 剧集 -->
+    <div class="section">
+        <h2>Top 3 TV Series</h2>
+        <p class="category-title">Worth re-watching</p>
+        <div class="media-grid">
+            <div class="media-card">
+                <img src="series1.jpg">
+                <div class="media-name">伦敦生活</div>
+                <div class="media-desc">It will pass</div>
+            </div>
+            <div class="media-card">
+                <img src="series2.jpg">
+                <div class="media-name">机智的医生生活</div>
+                <div class="media-desc">乌托邦</div>
+            </div>
+            <div class="media-card">
+                <img src="series3.jpg">
+                <div class="media-name">去他妈的世界</div>
+                <div class="media-desc">It's not your fault</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三块：喜欢的音乐类型 -->
+    <div class="section">
+        <h2>Music Taste</h2>
+        <p class="category-title">Genres I love</p>
         <ul>
-            <li>《伦敦生活》</li>
-            <li>（以后可以补充你喜欢的其他作品）</li>
+            <li>流行 & 说唱🧸</li>
+            <li>R&B & 蓝调🎼</li>
+            <li>最近沉迷jpop🥁(藤井风/Vaundy)</li>
+            <li>迷幻摇滚🎸</li>
         </ul>
     </div>
 
-    <div class="section">
-        <h2>私藏歌单</h2>
-        <p>这里可以放你喜欢的音乐风格、歌手或单曲</p>
-    </div>
 </body>
 </html>
