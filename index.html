@@ -64,41 +64,62 @@
     font-size: 0.9rem;
   }
 
-  /* 时间轴样式（已嵌入） */
+  /* ========= ✨ 美化版时间轴 ========= */
   .timeline {
     position: relative;
-    padding-left: 30px;
-    border-left: 2px solid #333;
-    margin-top: 10px;
+    padding-left: 32px;
+    border-left: 2px solid #444;
+    margin-top: 12px;
   }
+
   .timeline-item {
     position: relative;
-    margin-bottom: 18px;
-    padding-bottom: 4px;
+    margin-bottom: 24px;
+    background: #252525;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
   }
+
+  .timeline-item:hover {
+    transform: translateX(4px);
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
   .timeline-item::before {
     content: '';
     position: absolute;
-    left: -36px;
-    top: 6px;
-    width: 12px;
-    height: 12px;
+    left: -42px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: #64b5f6;
-    border: 2px solid #121212;
+    border: 3px solid #121212;
+    box-shadow: 0 0 8px rgba(100, 180, 250, 0.4);
   }
+
   .time-date {
     color: #90caf9;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
+    margin-bottom: 4px;
   }
+
   .time-city {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin: 2px 0;
+    color: #eee;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
   }
+
   .time-desc {
     font-size: 0.9rem;
+    color: #bbbbbb;
+    line-height: 1.5;
   }
 </style>
 </head>
@@ -114,7 +135,7 @@
         <p>World explorer/INFJ/射手座/日常未知流浪/抽象文艺逼</p>
     </div>
 
-    <!-- 👇 这里是你要的 时间轴 👇 -->
+    <!-- 👇 美化版时间轴 👇 -->
     <div class="section">
         <h2>Life Timeline 🕰️</h2>
         <div class="timeline">
