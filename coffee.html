@@ -54,6 +54,45 @@
     padding-left: 20px;
     margin-bottom: 10px;
   }
+  li {
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+    border-radius: 4px;
+    padding: 4px 6px;
+    margin: 4px 0;
+  }
+  li:hover {
+    background-color: #2a2a2a;
+    padding-left: 10px;
+  }
+  .category-title {
+    color: #999;
+    font-size: 0.95rem;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* 探店网格布局 */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .shop-item {
+    background: #252525;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .shop-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
 </style>
 </head>
 <body>
@@ -64,40 +103,49 @@
     <!-- 第一块：偏爱咖啡 & 酒类 -->
     <div class="section">
         <h2>Personal Favorites</h2>
-        <p><strong>Coffee</strong></p>
+        <p class="category-title">Coffee</p>
         <ul>
-            <li>Dirty☕️（唯一真神</li>
-            <li>最近爱上美式...?（生活不够苦/夏天来了</li>
-            <li>冷萃（final周/周一/赶due最严厉的老师</li>
+            <li>Dirty☕️（唯一真神）</li>
+            <li>最近爱上美式...?（生活不够苦/夏天来了）</li>
+            <li>冷萃（final周/周一/赶due最严厉的老师）</li>
         </ul>
-        <p><strong>Spirits & Wine</strong></p>
+        <p class="category-title">Spirits & Wine</p>
         <ul>
-            <li>Cocktail（经典里最爱威士忌酸🥃</li>
+            <li>Cocktail（经典里最爱威士忌酸🥃）</li>
             <li>偶尔吃bistro会尝试葡萄酒🍷</li>
-            <li>open to 任何特调/啤酒精酿（生活处处是惊喜/惊吓❓</li>
+            <li>open to 任何特调/啤酒精酿（生活处处是惊喜/惊吓❓）</li>
         </ul>
     </div>
 
-    <!-- 第二块：小众自制调酒 -->
+    <!-- 第二块：小众自制调酒 + 图标 -->
     <div class="section">
         <h2>Self-made Cocktail Recipes</h2>
-        <p>Record some simple & niche mixing methods for quiet nights.</p>
+        <p class="category-title">For quiet nights</p>
         <ul>
-            <li>Recipe1 水溶C+波本威士忌+冰块shake（3:1）你将得到一杯不怎么经典的威士忌酸</li>
-            <li>Recipe2 金酒+柠檬汁+苹果汁+冰块shake（2:1:3）适合chill的周五晚</li>
-            <li>探索中...</li>
+            <li>🥃 Recipe1 水溶C+波本威士忌+冰块shake（3:1）你将得到一杯不怎么经典的威士忌酸🤣</li>
+            <li>🍎 Recipe2 金酒+柠檬汁+苹果汁+冰块shake（2:1:3）适合chill的周五晚🥳</li>
+            <li>🔍 探索中...</li>
         </ul>
     </div>
 
-    <!-- 第三块：城市探店记录 -->
+    <!-- 第三块：城市探店 双列卡片 + 保留你全部原评语 -->
     <div class="section">
         <h2>City Shop Hunting</h2>
-        <p>Cafés & bars I loved in different cities.</p>
-        <ul>
-            <li>上海｜酒吧 Hermit全系列/3637space-快乐老家/植物收藏家-进入后变身森林里的猴子🐒/宝物-前提是能排到。/mush mush-很特别&好喝的酒</li>
-            <li>深圳｜咖啡店 野趣-最喜欢自习的地方/梨屋-小小的很温馨（本人活动范围仅在龙岗..</li>
-            <li>成都｜咖啡店 远家-该网页的诞生地。/Mondoli-有人会知道它的别名🤔</li>
-        </ul>
+        <p class="category-title">Cafés & bars I loved in different cities</p>
+
+        <div class="shop-grid">
+            <div class="shop-item">🏙️ 上海｜Hermit<br>全系列都很能打</div>
+            <div class="shop-item">🏙️ 上海｜3637space<br>快乐老家-喝完可以沿苏州河citywalk</div>
+            <div class="shop-item">🏙️ 上海｜植物收藏家<br>进入后变身森林里的猴子🐒</div>
+            <div class="shop-item">🏙️ 上海｜宝物<br>前提是能排到🤫</div>
+            <div class="shop-item">🏙️ 上海｜mush mush<br>很特别 & 惊喜的酒</div>
+
+            <div class="shop-item">🌃 深圳｜野趣<br>最喜欢自习的地方📖</div>
+            <div class="shop-item">🌃 深圳｜梨屋<br>小小的很温馨</div>
+
+            <div class="shop-item">🏯 成都｜远家<br>该网页的诞生地。。</div>
+            <div class="shop-item">🏯 成都｜Mondoli<br>有人会知道它的别名🤔</div>
+        </div>
     </div>
 
 </body>
