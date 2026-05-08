@@ -166,7 +166,6 @@
   .pet-card img {
     width: 100%;
     height: 160px;
-    /* 修复竖长照片问题：居中裁剪，优先显示中间部分 */
     object-fit: cover;
     object-position: center center;
     border-radius: 8px;
@@ -182,6 +181,40 @@
     color: #aaa;
     line-height: 1.4;
   }
+
+  /* 教育经历卡片样式 */
+  .edu-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .edu-card {
+    background: #252525;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+  }
+  .edu-card:hover {
+    transform: translateX(4px);
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .edu-date {
+    color: #90caf9;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+  .edu-school {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .edu-major {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
 </style>
 </head>
 <body>
@@ -194,6 +227,24 @@
     <div class="section">
         <h2>About Me</h2>
         <p>World explorer🌍 / INFJ🌿 / 射手座♐️ / 日常未知流浪🚶🏼‍♀️ / 抽象文艺逼🪺 </p>
+    </div>
+
+    <!-- 👇 新增：教育经历 👇 -->
+    <div class="section">
+        <h2>Education 🎓</h2>
+        <div class="edu-grid">
+            <div class="edu-card">
+                <div class="edu-date">2019.09 - 2023.06</div>
+                <div class="edu-school">🏫 厦门大学</div>
+                <div class="edu-major">📖 WISE（Econ）</div>
+            </div>
+                    <div class="edu-card">
+                <div class="edu-date">2026.09 - 2027.06</div>
+                <div class="edu-school">🏫 香港中文大学(深圳)--简称龙大🫢</div>
+                <div class="edu-major">📖 BA</div>
+            </div>
+            <!-- 你可以继续复制添加更多教育经历 -->
+        </div>
     </div>
     
     <div class="section">
