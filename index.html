@@ -64,14 +64,13 @@
     font-size: 0.9rem;
   }
 
-  /* ========= ✨ 美化版时间轴 ========= */
+  /* 时间轴美化样式 */
   .timeline {
     position: relative;
     padding-left: 32px;
     border-left: 2px solid #444;
     margin-top: 12px;
   }
-
   .timeline-item {
     position: relative;
     margin-bottom: 24px;
@@ -81,13 +80,11 @@
     border: 1px solid #333;
     transition: all 0.2s ease;
   }
-
   .timeline-item:hover {
     transform: translateX(4px);
     background: #2a2a2a;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
-
   .timeline-item::before {
     content: '';
     position: absolute;
@@ -101,25 +98,46 @@
     border: 3px solid #121212;
     box-shadow: 0 0 8px rgba(100, 180, 250, 0.4);
   }
-
   .time-date {
     color: #90caf9;
     font-weight: 700;
     font-size: 0.95rem;
     margin-bottom: 4px;
   }
-
   .time-city {
     color: #eee;
     font-weight: 500;
     font-size: 0.95rem;
     margin-bottom: 6px;
   }
-
   .time-desc {
     font-size: 0.9rem;
     color: #bbbbbb;
     line-height: 1.5;
+  }
+
+  /* My Vibe 卡片网格 */
+  .vibe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .vibe-card {
+    background: #252525;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  .vibe-card:hover {
+    transform: translateY(-3px);
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .vibe-card a {
+    color: inherit;
   }
 </style>
 </head>
@@ -134,8 +152,16 @@
         <h2>About Me</h2>
         <p>World explorer/INFJ/射手座/日常未知流浪/抽象文艺逼</p>
     </div>
-
-    <!-- 👇 美化版时间轴 👇 -->
+    
+    <div class="section">
+        <h2>My Skills</h2>
+        <ul>
+            <li>金融转行互联网（🟢->📖->🦘）</li>
+            <li>商业分析进阶打怪中🆕</li>
+            <li>AI小白研究vibe-coding中🦞</li>
+        </ul>
+    </div>
+    
     <div class="section">
         <h2>Life Timeline 🕰️</h2>
         <div class="timeline">
@@ -172,22 +198,17 @@
         </div>
     </div>
 
+    <!-- My Vibe 改成双列卡片 -->
     <div class="section">
-        <h2>My Skills</h2>
-        <ul>
-            <li>金融转行互联网</li>
-            <li>商业分析进阶打怪中</li>
-            <li>AI小白研究vibe-coding中</li>
-        </ul>
+        <h2>My Vibe</h2>
+        <div class="vibe-grid">
+            <div class="vibe-card">🎸 吉他爱好者（半吊子）</div>
+            <div class="vibe-card"><a href="photo.html">📷 摄影新手，景色✅人❌</a></div>
+            <div class="vibe-card"><a href="movies.html">🎬 电影 / 音乐</a></div>
+            <div class="vibe-card"><a href="coffee.html">☕ 早C晚A</a></div>
+        </div>
     </div>
 
-    <div class="section">
-    <h2>My Vibe</h2>
-    <p>🎸吉他爱好者（半吊子</p>
-    <p>📷 <a href="photo.html">摄影新手，景色✅人❌</a></p>
-    <p>🎬 <a href="movies.html">电影/音乐</a></p>
-    <p>☕ <a href="coffee.html">早C晚A</a></p>
-</div>
     <div class="section">
         <h2>Contact Me</h2>
         <p>Email: chloeqin1127@163.com</p>
